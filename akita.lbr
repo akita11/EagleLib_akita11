@@ -14363,6 +14363,33 @@ Source: http://www.maxstream.net/products/xbee/datasheet_XBee_OEM_RF-Modules.pdf
 <wire x1="-4" y1="-3.55" x2="4" y2="-3.55" width="0.254" layer="21"/>
 <text x="-4" y="4" size="1.27" layer="25">&gt;NAME</text>
 </package>
+<package name="USB-C_16P_TH">
+<description>USB Type-C Receptable, 16p with 8p dummy, GCT USB4110</description>
+<smd name="A1" x="-3.2" y="1" dx="0.6" dy="1.15" layer="1"/>
+<smd name="A4" x="-2.4" y="1" dx="0.6" dy="1.15" layer="1"/>
+<smd name="A9" x="2.4" y="1" dx="0.6" dy="1.15" layer="1"/>
+<smd name="A12" x="3.2" y="1" dx="0.6" dy="1.15" layer="1"/>
+<smd name="B8" x="-1.75" y="1" dx="0.3" dy="1.15" layer="1"/>
+<smd name="A5" x="-1.25" y="1" dx="0.3" dy="1.15" layer="1"/>
+<smd name="B7" x="-0.75" y="1" dx="0.3" dy="1.15" layer="1"/>
+<smd name="A6" x="-0.25" y="1" dx="0.3" dy="1.15" layer="1"/>
+<smd name="A7" x="0.25" y="1" dx="0.3" dy="1.15" layer="1"/>
+<smd name="B6" x="0.75" y="1" dx="0.3" dy="1.15" layer="1"/>
+<smd name="A8" x="1.25" y="1" dx="0.3" dy="1.15" layer="1"/>
+<smd name="B5" x="1.75" y="1" dx="0.3" dy="1.15" layer="1"/>
+<hole x="-2.89" y="-0.25" drill="0.65"/>
+<hole x="2.89" y="-0.25" drill="0.65"/>
+<wire x1="-4.17" y1="-6.335" x2="4.17" y2="-6.335" width="0.2" layer="21"/>
+<text x="-3.81" y="2.54" size="1.778" layer="25">&gt;NAME</text>
+<smd name="P$1" x="-4.32" y="0.435" dx="1" dy="2.1" layer="1" roundness="100"/>
+<smd name="P$2" x="-4.32" y="-3.735" dx="1" dy="2.1" layer="1" roundness="100"/>
+<wire x1="-4.32" y1="0.985" x2="-4.32" y2="-0.115" width="0.6" layer="46"/>
+<wire x1="-4.32" y1="-3.185" x2="-4.32" y2="-4.285" width="0.6" layer="46"/>
+<wire x1="4.32" y1="0.985" x2="4.32" y2="-0.115" width="0.6" layer="46"/>
+<wire x1="4.32" y1="-3.185" x2="4.32" y2="-4.285" width="0.6" layer="46"/>
+<smd name="P$3" x="4.32" y="0.435" dx="1" dy="2.1" layer="1" roundness="100"/>
+<smd name="P$4" x="4.32" y="-3.735" dx="1" dy="2.1" layer="1" roundness="100"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SENSOR_MMA7455L">
@@ -34933,6 +34960,25 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 </gates>
 <devices>
 <device name="" package="USB-C_16P">
+<connects>
+<connect gate="G$1" pin="CC1" pad="A5"/>
+<connect gate="G$1" pin="CC2" pad="B5"/>
+<connect gate="G$1" pin="DN1" pad="A7"/>
+<connect gate="G$1" pin="DN2" pad="B7"/>
+<connect gate="G$1" pin="DP1" pad="A6"/>
+<connect gate="G$1" pin="DP2" pad="B6"/>
+<connect gate="G$1" pin="GND1" pad="A1"/>
+<connect gate="G$1" pin="GND2" pad="A12"/>
+<connect gate="G$1" pin="SBU1" pad="A8"/>
+<connect gate="G$1" pin="SBU2" pad="B8"/>
+<connect gate="G$1" pin="VBUS1" pad="A4"/>
+<connect gate="G$1" pin="VBUS2" pad="A9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TH" package="USB-C_16P_TH">
 <connects>
 <connect gate="G$1" pin="CC1" pad="A5"/>
 <connect gate="G$1" pin="CC2" pad="B5"/>
